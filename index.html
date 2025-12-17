@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy</title>
+<link rel="stylesheet" href="..//js-project/assets/Css/style.css">
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">ShopEasy</div>
+<div class="search-bar">
+<input type="text" id="search" placeholder="Search products...">
+</div>
+<div class="nav-icons" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</div>
+</div>
+
+
+<div class="menu">
+  <a href="#" onclick="filterCategory('All')">Home</a>
+  <a href="#" onclick="filterCategory('Electronics')">Electronics</a>
+  <a href="#" onclick="filterCategory('Fashion')">Fashion</a>
+  <a href="#" onclick="filterCategory('Accessories')">Accessories</a>
+</div>
+
+
+
+<!-- PRODUCTS -->
+<div class="products" id="productList"></div>
+
+
+<!-- CART -->
+<div class="cart" id="cart">
+<button class="close-btn" onclick="toggleCart()">✖️</button>
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<div class="total">Total: ₹<span id="total">0</span></div>
+<button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>ShopEasy</h3>
+      <p>Your one-stop shop for quality products at the best prices.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Wishlist</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <p>🌐 Facebook</p>
+      <p>📸 Instagram</p>
+      <p>🐦 Twitter</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 ShopEasy. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+
+<script src="./assets/Js/script.js"></script>
+
+</body>
+</html>
