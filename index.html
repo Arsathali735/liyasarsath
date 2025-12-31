@@ -4,20 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ShopEasy</title>
-<link rel="stylesheet" href="..//js-project/assets/Css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../liyasarsath/assets/Css/style.css">
 </head>
 <body>
-
-
-<!-- NAVBAR -->
+<!-- NAVBAR and offcanvas start -->
 <div class="navbar">
 <div class="logo">ShopEasy</div>
-<div class="search-bar">
+<div class="search-bar" data-bs-target="#offcanvas" data-bs-toggle="offcanvas" >
 <input type="text" id="search" placeholder="Search products...">
+</div>
+<div class="wishlist-icon">
+  ❤️ Wishlist (<span id="wishlistCount">0</span>)
 </div>
 <div class="nav-icons" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</div>
 </div>
+<div class="offcanvas offcanvas-top w-100%" id="offcanvas" style="height: 100vh;">
+  
+  <div class="offcanvas-header"><h1>search</h1>
+  <button data-bs-target="#offcanvas" data-bs-toggle="offcanvas" data-bs-dimiss="offcanvasDark" type="button" class="btn-close"></button></div>
+  <div class="offcanvas-body">
+    
+    <form action="" onsubmit="fun(event)"> <input type="text" name="text" id="input" ><button type="submit">submit</button></form>
+    <div class="row" id="row1">
+    </div>
+  </div>
+</div> 
+<!-- NAVBAR and offcanvas end -->
 
+
+
+<!-- menu bar -->
 
 <div class="menu">
   <a href="#" onclick="filterCategory('All')">Home</a>
@@ -40,6 +58,7 @@
 <div class="total">Total: ₹<span id="total">0</span></div>
 <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
 </div>
+
 
 
 <!-- FOOTER -->
