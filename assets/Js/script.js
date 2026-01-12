@@ -104,7 +104,7 @@ var data1=""
   var get_data = document.getElementById("row1")
   data.map((value) => {
     data1 += `<div class="col-lg-3 mb-4">
-    <div class="card shadow border-warning">
+    <div class="card shadow border-warning"> 
     <img src="${value.image}" class="card-img-top">
         <div class="card-body">
             <h5>${value.name}</h5>
@@ -194,7 +194,7 @@ function toggleCart() {
 
 // CHECKOUT
 function checkout() {
-  if (Object.keys(cart).length === 0) {
+  if (Object.keys(cart).length === 0)   {
     alert("Cart is empty!");
     return;
   }
